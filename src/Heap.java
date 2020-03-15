@@ -1,14 +1,14 @@
 public class Heap<T> {
     //insert, deleteMin, size, getElement
     private int[] Heap;
-    private int size;
-    private int maxsize;
+    public static int size;
+    public static int maxsize;
 
     private static final int FRONT = 1;
 
     public Heap(int maxsize)
     {
-        this.maxsize = maxsize;
+        this.maxsize = maxsize + 2;
         this.size = 0;
         Heap = new int[this.maxsize + 1];
        // Heap[0] = Integer.MIN_VALUE;
@@ -46,6 +46,7 @@ public class Heap<T> {
         }
         return false;
     }
+
 
     // Function to swap two nodes of the heap
     private void swap(int fpos, int spos)
@@ -137,7 +138,9 @@ public class Heap<T> {
 
     public int getElement(int element)
     {
-        return Heap[element];
+
+            return Heap[element];
+
     }
 
 }
